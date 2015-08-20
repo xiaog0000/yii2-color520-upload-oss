@@ -1,0 +1,21 @@
+{
+    "name": "color520/yii2-upload-to-oss",
+    "description": "upload something to oss",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension","upload","Oss"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "puti",
+            "email": "puti@color520.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "color520\\uploadToOss\\": ""
+        }
+    }
+}
