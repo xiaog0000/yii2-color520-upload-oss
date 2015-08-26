@@ -1,0 +1,31 @@
+#searchRoomName, #searchUserName, #searchPositionId, #searchHouseId{
+    width:600px;
+    padding: 0px 0px 10px 0px;
+}
+
+#search_room_input, #search_user_input, #search_position_input, #search_house_input{
+    padding:0 0 0 5px ;
+    width:485px;
+    height:28px;
+    margin:0px;
+    font-size:14px;
+}
+
+#search_room_list, #search_user_list, #search_position_list, #search_house_list{
+    overflow: auto;
+    width:485px;
+    margin-left: 105px;
+    max-height:198px;
+    padding:0px;
+    border:1px solid #ccc;
+    list-style-type:none;
+}
+
+#search_room_list li, #search_user_list li, #search_position_list li, #search_house_list li{
+    padding-left:10px;
+    line-height:22px;
+    font-size:13px;
+    width:485px;
+    height:22px;
+    cursor:default;
+}
