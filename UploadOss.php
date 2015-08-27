@@ -47,7 +47,6 @@ class UploadOss extends InputWidget
     public function run()
     {
         Assets::register($this->view);
-
         $token= Yii::$app->request->getCsrfToken();
         $tokenName= Yii::$app->request->csrfParam;
         $jsOptions = [
@@ -56,10 +55,12 @@ class UploadOss extends InputWidget
             $tokenName => $token
         ];
         $this->jsOptions = array_merge($jsOptions,$this->jsOptions);
-        $this->registerScripts();
+        //$this->registerScripts();
+        $id = $this->id.'_upload';
         $message = '<table><tr><td><input style="width: 400px;" type="text" name='.$this->name.' id='.$this->id.' value='.$this->value.'></td>';
-        $message .= '<td><form class = "colorUpload"><input type="file" name="upload" data-server='.Url::to(['upload']).' ></form></td></tr></table>';
-        $message .= '<img src='.$this->value.' />';
+        $message .= '<td><input type="file" class = "colorUpload" name="upload" id = '.$id.' data-id= '.$id.' data-server='.Url::to(['upload']).' ></td>';
+        $message .= '<td><input type="button" class = "colorUploadButton" value="上传"></td></tr></table>';
+        $message .= '<img src='.$this->value.'/>';
         $content = Html::tag('div', $message, $this->options);
         return $content;
     }
