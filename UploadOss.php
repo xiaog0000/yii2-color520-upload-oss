@@ -60,7 +60,7 @@ class UploadOss extends InputWidget
         $message = '<table><tr><td><input style="width: 400px;" type="text" name='.$this->name.' id='.$this->id.' value='.$this->value.'></td>';
         $message .= '<td><input type="file" class = "colorUpload" name="upload" id = '.$id.' data-id= '.$id.' data-server='.Url::to(['upload']).' ></td>';
         $message .= '<td><input type="button" class = "colorUploadButton" value="上传"></td></tr></table>';
-        $message .= '<img src='.$this->value.'/>';
+        $message .= '<img src='.$this->value.'@!w480'.' />';
         $content = Html::tag('div', $message, $this->options);
         return $content;
     }

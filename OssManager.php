@@ -43,10 +43,16 @@ class OssManager{
             'fileUpload' => $serverpath,
             'partSize' => 5242880,
         );
+//        $options = array(
+//            ALIOSS::OSS_HEADERS => array(
+//                'Content-Type' => 'image/jpeg',
+//            ),
+//        );
         $is_object_exist = $this->ossobj->is_object_exist($this->ossbuket, $osspath);
         $isexist = $is_object_exist->isOK();
         if (!$isexist) {
             $response = $this->ossobj->create_mpu_object($this->ossbuket, $osspath, $options);
+            //$response = $this->ossobj->upload_file_by_file($this->ossbuket, $osspath, $serverpath, $options);
             $isok = $response->isOK();
             if (!$isok) {
                 $this->_format($response);
