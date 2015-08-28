@@ -14,7 +14,7 @@ use yii\web\UploadedFile;
 use yii\helpers\Json;
 
 
-class Upload extends Action
+class OssUpload extends Action
 {
     public $config = [
 
